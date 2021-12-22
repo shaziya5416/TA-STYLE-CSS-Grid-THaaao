@@ -1,0 +1,21 @@
+footer {
+    padding: 2rem 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1rem;
+    small {
+      @extend %p;
+      text-transform: capitalize;
+      span {
+        color: $yellow;
+      }
+    }
+    li {
+      display: inline;
+      margin: 0 0.5rem;
+    }
+    li a {
+      color: $light-grey;
+    }
+  }

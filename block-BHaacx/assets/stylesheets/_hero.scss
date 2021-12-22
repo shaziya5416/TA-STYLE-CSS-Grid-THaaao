@@ -1,0 +1,39 @@
+.hero {
+    display: grid;
+    grid-template-columns: auto;
+    h1 {
+      @extend %heading;
+      span {
+        font-weight: 900;
+      }
+    }
+    article:nth-child(2) {
+      display: grid;
+      gap: 1rem;
+      background-color: $pink;
+      padding: 1rem 1.5rem;
+      p {
+        @extend %p;
+      }
+    }
+    small {
+      text-transform: uppercase;
+      @extend %small;
+    }
+    button {
+      @extend %btn;
+      background: transparent;
+      border: 2px solid $dark-grey;
+      width: fit-content;
+    }
+  }
+  @media (min-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr 1fr;
+      article:nth-child(2) {
+        padding: 1rem 2rem;
+        align-items: center;
+        align-content: center;
+      }
+    }
+  }

@@ -1,0 +1,614 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.header nav {
+  display: none;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+strong {
+  font-weight: 900;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  display: block;
+}
+
+button a {
+  text-transform: uppercase;
+  color: #383838;
+  font-weight: 700;
+}
+
+.contact .contact-info h3, .contact h2, .experiences h2, .wrapper h3, .about h2, .hero h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #383838;
+}
+
+.experiences h3 {
+  font-size: 1rem;
+}
+
+.contact .contact-info li, .contact .contact-info address, .contact small, .experiences small, .about small, .hero small {
+  font-size: 0.6rem;
+  color: #a19d9a;
+  font-weight: 700;
+}
+
+footer small, .experiences p, .wrapper p, .about .about-left p, .hero article:nth-child(2) p {
+  font-size: 0.8rem;
+  color: #a19d9a;
+}
+
+.contact form button, .hero button {
+  border-radius: 1.5rem;
+  font-size: 0.8rem;
+  border: none;
+  padding: 1em 2em;
+}
+
+@media (min-width: 768px) {
+  .contact .contact-info h3, .contact h2, .experiences h2, .wrapper h3, .about h2, .hero h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #383838;
+  }
+
+  .experiences h3 {
+    font-size: 1.4rem;
+  }
+
+  .contact .contact-info li, .contact .contact-info address, .contact small, .experiences small, .about small, .hero small {
+    font-size: 0.8rem;
+    color: #a19d9a;
+    font-weight: 700;
+  }
+
+  footer small, .experiences p, .wrapper p, .about .about-left p, .hero article:nth-child(2) p {
+    font-size: 1rem;
+    color: #a19d9a;
+  }
+
+  .contact form button, .hero button {
+    border-radius: 2rem;
+    font-size: 1rem;
+    border: none;
+    padding: 1em 2em;
+  }
+}
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  position: relative;
+  text-transform: capitalize;
+}
+header a.brand-name,
+header label {
+  font-size: 1.2rem;
+  color: #383838;
+}
+header label {
+  display: grid;
+  justify-items: end;
+  font-size: 1.2rem;
+  color: #ecaf4e;
+}
+header #toggle:checked ~ .navbar {
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 2.8rem;
+  background-color: #ffffff;
+  padding: 2rem 0;
+  background-color: #302b2b;
+  height: 100vh;
+}
+header #toggle:checked ~ .navbar ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+header #toggle:checked ~ .navbar ul .nav-menu-item {
+  margin-bottom: 1rem;
+}
+header #toggle:checked ~ .navbar ul .nav-menu-link {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ecaf4e;
+}
+
+@media (min-width: 768px) {
+  .header {
+    width: 100%;
+    position: absolute;
+    background: transparent;
+    justify-content: space-between;
+    padding: 3rem 5rem;
+  }
+  .header label {
+    display: none;
+  }
+  .header nav {
+    display: block;
+  }
+  .header nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 2rem;
+  }
+  .header nav li a {
+    color: #383838;
+  }
+  .header a.brand-name {
+    text-shadow: 0.08rem 0.08rem #ffffff;
+  }
+}
+.hero {
+  display: grid;
+  grid-template-columns: auto;
+}
+.hero h1 span {
+  font-weight: 900;
+}
+.hero article:nth-child(2) {
+  display: grid;
+  gap: 1rem;
+  background-color: #f5e3d7;
+  padding: 1rem 1.5rem;
+}
+.hero small {
+  text-transform: uppercase;
+}
+.hero button {
+  background: transparent;
+  border: 2px solid #383838;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero article:nth-child(2) {
+    padding: 1rem 2rem;
+    align-items: center;
+    align-content: center;
+  }
+}
+.about {
+  display: grid;
+  grid-template-columns: auto;
+}
+.about .about-left {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+}
+.about small {
+  color: #ecaf4e;
+  text-transform: uppercase;
+}
+.about .about-left,
+.about .about-right article:nth-child(2) {
+  padding: 2rem 1.5rem;
+}
+.about .about-right {
+  display: grid;
+  grid-template-columns: auto;
+}
+.about .skills {
+  display: grid;
+  gap: 1rem;
+}
+.about .progress-container {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr;
+}
+.about progress {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .about {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about .about-right {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+}
+.wrapper article {
+  padding: 2rem 1.5rem;
+  background: blue;
+  display: grid;
+  text-align: center;
+  gap: 1rem;
+}
+.wrapper article p,
+.wrapper article h3,
+.wrapper article i {
+  color: #ffffff;
+}
+.wrapper h3 {
+  text-transform: capitalize;
+}
+.wrapper i {
+  font-size: 2rem;
+}
+.wrapper article:nth-child(1) {
+  background-color: #ecaf4e;
+}
+.wrapper article:nth-child(2) {
+  background-color: #f8673d;
+}
+.wrapper article:nth-child(3) {
+  background-color: #383838;
+}
+.wrapper article:nth-child(4) {
+  background-color: #ffffff;
+}
+.wrapper article:nth-child(4) p,
+.wrapper article:nth-child(4) i,
+.wrapper article:nth-child(4) h3 {
+  color: #383838;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+  .wrapper article {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .wrapper i {
+    font-size: 3rem;
+  }
+}
+.experiences {
+  display: grid;
+  grid-template-columns: auto;
+  color: #ffffff;
+}
+.experiences .experience-article {
+  background-color: #f8673d;
+  padding: 2rem 1.5rem;
+  gap: 1rem;
+  display: grid;
+}
+.experiences h2 {
+  text-transform: capitalize;
+}
+.experiences h3 {
+  text-transform: capitalize;
+}
+.experiences h3 span {
+  color: #383838;
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+.experiences small {
+  text-transform: capitalize;
+}
+.experiences h2,
+.experiences p,
+.experiences h3,
+.experiences small {
+  color: #ffffff;
+}
+.experiences .experience-list {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+}
+.experiences .experience-list article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+.experiences .experience-list article i {
+  font-size: 1.5rem;
+}
+.experiences .experience-list article div {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 0.2rem;
+}
+
+@media (min-width: 768px) {
+  .experiences {
+    grid-template-columns: 1fr 1fr;
+  }
+  .experiences .experience-article {
+    align-content: center;
+  }
+}
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+}
+footer small {
+  text-transform: capitalize;
+}
+footer small span {
+  color: #ecaf4e;
+}
+footer li {
+  display: inline;
+  margin: 0 0.5rem;
+}
+footer li a {
+  color: #a19d9a;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: auto;
+}
+.contact .contact-left,
+.contact .contact-info {
+  padding: 2rem 1.5rem;
+}
+.contact h2 {
+  text-transform: capitalize;
+}
+.contact .contact-left {
+  display: grid;
+  gap: 1rem;
+  background-color: #f8673d;
+}
+.contact .contact-left h2,
+.contact .contact-left small,
+.contact .contact-left input,
+.contact .contact-left textarea {
+  color: #ffffff;
+}
+.contact form input,
+.contact form textarea {
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1px solid #ecaf4e;
+  background: none;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.contact form textarea {
+  resize: none;
+}
+.contact form button {
+  width: 100%;
+}
+.contact .contact-right {
+  display: grid;
+  grid-template-columns: auto;
+}
+.contact .contact-info {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+  background-color: #383838;
+  color: #ffffff;
+}
+.contact .contact-info h3 {
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.contact .contact-info address {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+.contact .contact-info li {
+  font-size: 0.8rem;
+}
+.contact .contact-info div {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+}
+.contact .contact-info ul {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 0.5rem;
+}
+.contact .contact-info ul i {
+  margin-right: 0.5rem;
+  color: #a19d9a;
+}
+.contact .contact-info ul li {
+  color: #ecaf4e;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact .contact-right {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.map {
+  padding: 2rem 0;
+  background: #f8673d;
+}
+.map iframe {
+  width: 100%;
+  height: 20rem;
+}
+
+@media (min-width: 768px) {
+  .map {
+    padding: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
