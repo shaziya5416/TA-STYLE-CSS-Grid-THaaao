@@ -1,0 +1,74 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: $white;
+    position: relative;
+    text-transform: capitalize;
+    a.brand-name,
+    label {
+      font-size: 1.2rem;
+      color: $dark-grey;
+    }
+    label {
+      display: grid;
+      justify-items: end;
+      font-size: 1.2rem;
+      color: $yellow;
+    }
+    #toggle:checked ~ .navbar {
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      top: 2.8rem;
+      background-color: $white;
+      padding: 2rem 0;
+      background-color: rgb(48, 43, 43);
+      height: 100vh;
+      ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        .nav-menu-item {
+          margin-bottom: 1rem;
+        }
+        .nav-menu-link {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: $yellow;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .header {
+      width: 100%;
+      position: absolute;
+      background: transparent;
+      justify-content: space-between;
+      padding: 3rem 5rem;
+      label {
+        display: none;
+      }
+      nav {
+        display: block;
+        ul {
+          display: grid;
+          grid-template-columns: repeat(5, auto);
+          gap: 2rem;
+        }
+        li a {
+          color: $dark-grey;
+        }
+      }
+      a.brand-name {
+        text-shadow: 0.08rem 0.08rem $white;
+      }
+    }
+  }

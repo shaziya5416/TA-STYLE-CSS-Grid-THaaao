@@ -1,0 +1,95 @@
+.contact {
+    display: grid;
+    grid-template-columns: auto;
+    .contact-left,
+    .contact-info {
+      padding: 2rem 1.5rem;
+    }
+    h2 {
+      @extend %heading;
+      text-transform: capitalize;
+    }
+    small {
+      @extend %small;
+    }
+    .contact-left {
+      display: grid;
+      gap: 1rem;
+      background-color: $orange;
+      h2,
+      small,
+      input,
+      textarea {
+        color: $white;
+      }
+    }
+    form {
+      input,
+      textarea {
+        padding: 0.5rem;
+        border: none;
+        border-bottom: 1px solid $yellow;
+        background: none;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      textarea {
+        resize: none;
+      }
+      button {
+        @extend %btn;
+        width: 100%;
+      }
+    }
+    .contact-right {
+      display: grid;
+      grid-template-columns: auto;
+    }
+    .contact-info {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 1rem;
+      background-color: $dark-grey;
+      color: $white;
+      h3 {
+        @extend %heading;
+        color: $white;
+        text-transform: capitalize;
+      }
+      address {
+        @extend %small;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+      }
+      li {
+        @extend %small;
+        font-size: 0.8rem;
+      }
+      div {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1rem;
+      }
+      ul {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 0.5rem;
+        i {
+          margin-right: 0.5rem;
+          color: $light-grey;
+        }
+        li {
+          color: $yellow;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .contact {
+      grid-template-columns: 1fr 1fr;
+      .contact-right {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
