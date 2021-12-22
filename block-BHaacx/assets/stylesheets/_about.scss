@@ -1,0 +1,51 @@
+.about {
+    display: grid;
+    grid-template-columns: auto;
+    h2 {
+      @extend %heading;
+    }
+    .about-left {
+      display: grid;
+      grid-template-columns: auto;
+      p {
+        @extend %p;
+      }
+      gap: 1rem;
+    }
+    small {
+      @extend %small;
+      color: $yellow;
+      text-transform: uppercase;
+    }
+    .about-left,
+    .about-right article:nth-child(2) {
+      padding: 2rem 1.5rem;
+    }
+    .about-right {
+      display: grid;
+      grid-template-columns: auto;
+    }
+    .skills {
+      display: grid;
+      gap: 1rem;
+    }
+    .progress-container {
+      display: grid;
+      gap: 0.5rem;
+      grid-template-columns: 1fr;
+    }
+    progress {
+      // -webkit-appearance: none;
+      // appearance: none;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .about {
+      grid-template-columns: 1fr 1fr;
+      .about-right {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
